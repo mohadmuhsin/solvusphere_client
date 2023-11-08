@@ -1,54 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Button,
-  Dialog,
   Card,
-  CardHeader,
   CardBody,
   CardFooter,
   Typography,
   Input,
-  Checkbox,
 } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
 function LoginPage() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   return (
     <div>
-      <div className="bg-black opacity-90 flex flex-col justify-center align-middle items-center min-h-screen">
-        
-        <Card className="mx-auto w-full max-w-[24rem] bg-opacity-0 border border-white bg-blur py-5">
-          
+      <div className="bg-black opacity-90 flex flex-col justify-center align-middle items-center min-h-screen w-full md:px-0 px-5">
+        <Card className="mx-auto w-full max-w-[24rem] bg-opacity-0 border border-blue-gray-300 bg-blur py-5">
           <CardBody className="flex flex-col gap-10">
             <Typography className="-mb-5 mx-auto" variant="h4" color="white">
               LOGIN
             </Typography>
-            <Input label="Email" size="lg" />
-
-            <Input label="Password" size="lg" />
+            <Input
+              label="Email"
+              onChange={(e) => setEmail(e.target.value)}
+              size="lg"
+              color="blue-gray"
+            />
+            
+            <Input
+              label="Password"
+              type="password"
+              color="blue-gray"
+              onChange={(e) => setPassword(e.target.value)}
+              size="lg"
+            />
           </CardBody>
 
           <CardFooter className="">
             <Button variant="gradient" color="yellow" fullWidth>
               Log In
             </Button>
-            <Typography variant="small" className="mt-4 flex justify-center">
+            <Typography variant="small" className="mt-4 flex justify-center " color="gray">
               Don&apos;t have an account?
+              <Link to='/register'>
               <Typography
                 as="a"
-                href="#signup"
                 variant="small"
-                color="blue-gray"
-                className="ml-1 font-bold"  
+                color="white"
+                className="ml-1 font-bold opacity-100"
               >
                 Sign up
               </Typography>
-
+              </Link> 
             </Typography>
           </CardFooter>
-          
         </Card>
-
       </div>
     </div>
   );
