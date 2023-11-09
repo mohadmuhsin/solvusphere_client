@@ -8,6 +8,14 @@ export const LoginSchema = Yup.object({
 });
 
 
+export const RegisterSchema = Yup.object({
+    email: Yup.string().email().required("Please enter your email"),
+    name: Yup.string().min(4).required("Please your name")
+});
+
+
+
+
 
    
   
