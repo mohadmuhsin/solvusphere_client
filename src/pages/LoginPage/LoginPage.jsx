@@ -23,7 +23,7 @@ function LoginPage() {
   return (
     <div>
       <div className="bg-black opacity-90 flex flex-col justify-center align-middle items-center min-h-screen w-full md:px-0 px-5">
-        <Card className="mx-auto w-full max-w-[24rem] bg-opacity-0 border border-blue-gray-300 bg-blur py-5">
+        <Card className="mx-auto w-full max-w-[24rem] border bg-gray-900 bg-opacity-20 py-5">
           <CardBody className="flex flex-col gap-10">
             <Typography className="-mb-5 mx-auto" variant="h4" color="white">
               LOGIN
@@ -45,6 +45,7 @@ function LoginPage() {
             </div>
 
             <div>
+            
             <Input
               label="Password"
               type="password"
@@ -55,6 +56,7 @@ function LoginPage() {
               onBlur={handleBlur}
               value={values.password}
               error={touched.password && errors.password}
+              className="text-white"
             />
             {touched.password && errors.password && (
               <div className="text-red-500 text-sm py-1 ">{errors.password}</div>
