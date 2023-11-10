@@ -4,7 +4,7 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import UserRegistration from "./pages/User/UserRegistration";
 import HomePage from "./pages/User/HomePage";
 import UserLayout from "./pages/User/UserLayout";
-import CreatedPassword from "./pages/User/CreatedPassword";
+import CreatedPassword from "./pages/User/CreatePassword";
 
 function App() {
   return (

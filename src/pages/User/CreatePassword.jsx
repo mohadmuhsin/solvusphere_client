@@ -8,7 +8,7 @@ import {
 } from "@material-tailwind/react";
 import React from "react";
 
-function CreatedPassword() {
+function CreatePassword() {
   return (
     <div>
       <div className="bg-black opacity-90 flex flex-col justify-center align-middle items-center min-h-screen w-full md:px-0 px-5">
@@ -63,4 +63,4 @@ function CreatedPassword() {
   );
 }
 
-export default CreatedPassword;
+export default CreatePassword;
